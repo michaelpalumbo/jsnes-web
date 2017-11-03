@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>osc.js Web Sockets</title>
+        <meta charset="UTF-8" />
+        <script src="bower_components/osc.js/dist/osc-browser.min.js"
+
+        var oscPort = new osc.WebSocketPort({
+    url: "ws://localhost:8081", // URL to your Web Socket server.
+    metadata: true
+    oscPort.open();
+
+});
+oscPort.on("message", function (oscMsg) {
+    console.log("An OSC message just arrived!", oscMsg);
+});
+
+
+
+
+></script>
+    </head>
+    <body></body>
+</html>
